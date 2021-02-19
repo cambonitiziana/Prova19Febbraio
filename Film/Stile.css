@@ -1,0 +1,50 @@
+body{
+    background-color: rgba(0, 0, 0, 0.562);
+    text-align: center;
+    color: chartreuse;
+    font-family: 'Calibri', monospace;     
+    font-size: large;
+    background-image: url("matrix.jpg");
+    background-position: 0 0;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+section{
+    color: rgb(48, 236, 48);
+    }
+
+
+header{
+    background-color:black;
+    color: darkseagreen;
+    margin: 15px;
+    
+
+}
+
+button {
+    color: black;
+    border: 3px solid;
+    background-color: greenyellow;
+    border-radius: 20px;
+}
+button:visited, button:hover {
+    color: black;
+    border: 3px solid;
+    background-color: greenyellow;
+    border-radius: 20px;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    display: block;
+
+    text-align: center;
+    background-color:rgba(21, 75, 57, 0.397);
+    margin: 30px rgb(9, 131, 90);
+    padding: 10px rgba(73, 207, 163, 0.575);
+}

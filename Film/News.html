@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="Stile.css">
+    <style>
+        
+    </style>
+    <script>
+
+        function change(){
+            let inputs=document.querySelectorAll("input[type='text'], input[type='text']")
+            let button=document.querySelector("input[type='submit']")
+            let storage= window.localStorage;
+            button.disabled = ""
+            for (let i=0 ; i<storage.length; i++){
+                for (let j=0; j< inputs.length; j++)
+                if (inputs[i].value==""){
+                    button.disabled="disabled"
+                }
+               // else if ((inputs[i].value==)|| storage
+            }
+
+
+        }
+
+
+        function Save(){
+            let storage= window.localStorage;
+            let Id= document.getElementById("Id").value; 
+            let Nickname= document.getElementById("Nickname").value;
+            
+            try{
+                storage.setItem(Nickname,Id);
+
+
+            } catch (e)
+            {
+                document.getElementById("debug").innerHTML="<strong> Salvataggio non effettuato </strong>"
+            }
+        }
+
+
+
+
+</script>
+    </head>
+    <body>
+        <header>
+            <h1></h1>
+        </header>   
+        <article>
+                <header><h1>News</h1></header>
+                <p><h2>Rimani sempre aggiornato! Iscriviti alla nostra newsletter</h2></p>
+                <br>
+                <p><h2>Inserisci il tuo nickname</h2></p>
+
+            <form>
+                <div>
+                    <label>Id</label>
+                    <input type="text" id="Id" onchange="change()"/>
+                    <label>Nickname</label>
+                    <input type="text" id="Nickname" onchange="change()"/>
+                   
+            
+                <input onclick="Save()" type="submit" value="Subscribe" disabled/>
+                <br>
+                <div id="debug"></div>
+
+            </form>
+        </article> 
+        <br>
+        <br>
+        <br>
+    
+     <button><a href="home.html" disabled>Torna alla home</a></button>
+
+     <footer>
+        Tiziana Camboni <br>
+         Copyright &copy; Camboni
+     </footer>
+    </body>
+
+
+</html>
